@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRAPHICON</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/fontawesome.min.css">
+</head>
+
+<body>
+    <nav class="nav nav_create">
+        <div class="general">
+            <div class="head">
+                <ul>
+                    <li style="--clr:#B68AD4">
+                        <a href="main.html" data-text="&nbsp;назад">&nbsp;назад&nbsp;</a>
+                    </li>
+                </ul>
+                <div class="arrow">
+
+                </div>
+            </div>
+            <div class="block block_tools">
+                <div class="icons icons_tools">
+                    <button class="tools" onclick='modeBrush()'><img src="img/brush.png" alt="" class="tools_ico"></button>
+                    <button class="tools" onclick='modeFill()'><img src="img/fill.png" alt="" class="tools_ico"></button>
+                    <button class="tools" onclick='modeText()'><img src="img/text.png" alt="" class="tools_ico"></button>
+                    <button class="tools" onclick='modeEraser()'><img src="img/eraser.png" alt="" class="tools_ico"></button>
+                </div>
+                <div class="block_text">инструменты</div>
+            </div>
+
+            <div class="block block_contours">
+                <div class="icons icons_contours">
+                    <button class="contour" id="jsContour" value="1"><i class="fas fa-solid fa-crow fa-2x"></i></button>
+                    <button class="contour" id="jsContour" value="2"><i class="fas fa-solid fa-plane fa-2x"></i></button>
+                    <button class="contour" id="jsContour" value="3"><i class="fas fa-regular fa-car fa-2x"></i></button>
+                    <button class="contour" id="jsContour" value="4"><i class="fas fa-solid fa-hippo fa-2x"></i></i></button>
+                    <button class="contour" id="jsContour" value="5"><i class="fas fa-solid fa-fish fa-2x"></i></button>
+                    <button class="contour" id="jsContour" value="6"><i class="fas fa-solid fa-motorcycle fa-2x"></i></button>
+                    <button class="contour cancelBtn" value="7">отмена</button>
+                </div>
+                <div class="block_text">контуры</div>
+            </div>
+            <div class="save">
+                <ul>
+                    <li style="--clr:#B68AD4">
+                        <a id="saveBtn" data-text="&nbsp;сохранить">&nbsp;сохранить&nbsp;</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <div class="content_create">
+        <div class="general general_second">
+
+            <div class="block block_colors">
+                <div class="icons icons_colors" id="jsColors">
+                    <button class="color jsColor" style="background-color: #000000;"></button>
+                    <button class="color jsColor" style="background-color: #676767;"></button>
+                    <button class="color jsColor" style="background-color: #8B0000;"></button>
+                    <button class="color jsColor" style="background-color: #FF0000;"></button>
+                    <button class="color jsColor" style="background-color: #FF9900;"></button>
+                    <button class="color jsColor" style="background-color: #FFF500;"></button>
+                    <button class="color jsColor" style="background-color: #00E232;"></button>
+                    <button class="color jsColor" style="background-color: #0500FF;"></button>
+                    <button class="color jsColor" style="background-color: #FFFFFF;"></button>
+                    <button class="color jsColor" style="background-color: #D9D9D9;"></button>
+                    <button class="color jsColor" style="background-color: #FF00E5;"></button>
+                    <button class="color jsColor" style="background-color: #8C00CE;"></button>
+                    <button class="color jsColor" style="background-color: #FFCC80;"></button>
+                    <button class="color jsColor" style="background-color: #809CFF;"></button>
+                    <button class="color jsColor" style="background-color: #00F0FF;"></button>
+                    <input class="color jsColor" type="color" id="color" style="background-color: transparent" />
+                </div>
+                <div class="block_text">цвета</div>
+            </div>
+            <div class="block block_colors block_size">
+                <div class="slider_cont">
+                    <input id="jsRange" class="slider" type="range" min="1" max="100" value="3">
+                </div>
+                <div class="block_text">толщина</div>
+            </div>
+            <div id="text_mode_cont">
+                <input id="textModeInput" placeholder="введите текст" autocomplete="off">
+
+            </div>
+        </div>
+
+
+
+        <canvas id="canvas" class="field">
+            
+        </canvas>
+    </div>
+    <script src='libs/jquery/jquery-3.6.1.min.js'></script>
+    <script src="src/script.js"></script>
+</body>
+
+</html>
